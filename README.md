@@ -49,3 +49,7 @@ Basically files under "public" folder are copied, minified or converted to "publ
 
 ## License
 [MIT](http://opensource.org/licenses/mit-license.html)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/eunjae-lee/node-express-boilerplate/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
