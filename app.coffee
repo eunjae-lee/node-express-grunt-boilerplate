@@ -2,7 +2,7 @@ express = require 'express'
 routes = require './routes/routes'
 http = require 'http'
 path = require 'path'
-config = require './config'
+config = require('./config').config
 
 app = express()
 
