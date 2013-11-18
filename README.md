@@ -1,6 +1,6 @@
 # node-express-boilerplate
 
-A boilerplate to start a new express project based on CoffeeScript, Grunt build system, forever runner, Jade Template and bootstrap.
+A boilerplate to start a new express project based on CoffeeScript, Grunt build system, forever runner, Jade Template Engine and bootstrap.
 
 Any suggestions or pull-requests are welcomed!
 
