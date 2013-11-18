@@ -28,9 +28,9 @@ module.exports = (grunt) ->
       #images:
       # files: 'public/images/**/*'
       # tasks: ['copy:images']
-      views:
-        files: 'views/**/*'
-        tasks: ['default']
+      css:
+        files: 'public/stylesheets/**/*.css'
+        tasks: ['copy:css']
       less:
         files: 'public/less/**/*.less'
         tasks: ['less:dev']

@@ -2,10 +2,11 @@ express = require 'express'
 routes = require './routes/routes'
 http = require 'http'
 path = require 'path'
+config = require './config'
 
 app = express()
 
-app.set 'port', 3000
+app.set 'port', config.port
 app.set 'views', __dirname + '/views'
 app.set 'view engine', 'jade'
 app.use express.favicon()
