@@ -4,11 +4,15 @@
   "private": true,
   "scripts": {
     "preinstall": "sudo npm install -g coffee-script grunt grunt-cli forever",
-    "start": "./start.sh"
+    "start": "coffee scripts/start.coffee",
+    "stop": "coffee scripts/stop.coffee"
   },
   "dependencies": {
+    "colors": "*",
+    "forever": "*",
     "express": "*",
-    "jade": "*"
+    "jade": "*",
+    "shelljs": "*"
   },
   "devDependencies": {
     "grunt": "*",

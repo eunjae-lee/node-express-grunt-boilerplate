@@ -2,6 +2,7 @@
 
 A boilerplate to start a new express project based on CoffeeScript, Grunt build system, forever runner, Jade Template and bootstrap.
 
+Any suggestions or pull-requests are welcomed!
 
 
 ## Usage
@@ -16,6 +17,12 @@ A boilerplate to start a new express project based on CoffeeScript, Grunt build 
 	
 ### Stopping Server
     npm stop
+    
+### Restarting Server
+    npm restart
+
+### Check If Server is Running
+    ./isRunning.sh
 
 ## Folder Tree
     public
