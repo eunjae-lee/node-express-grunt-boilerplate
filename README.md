@@ -43,7 +43,9 @@ Basically files under "public" folder are copied, minified or converted to "publ
   * public/images
     * To compress images, run "grunt imagecomp"
   * public/javascripts
+    * and also uglified to "\*.min.js"
   * public/stylesheets
+    * and also minified to "\*.min.css"
 * Files under "public/coffeescripts" will be converted to "\*.js" and "\*.min.js" at "/public_built/javascripts"
 * Files under "public/less" will be converted to "\*.css" and "\*.min.css" at "/public_built/stylesheets"
 
