@@ -74,9 +74,9 @@ module.exports = (grunt) ->
       dev:
         files: [{
           expand: true
-          cwd: 'public_built/javascripts'
+          cwd: 'public_built/javascripts/'
           src: ['**/*.js', '!**/*.min.js']
-          dest: 'pubilc_built/javascripts'
+          dest: 'public_built/javascripts'
           ext: '.min.js'
         }]
     cssmin:
