@@ -81,10 +81,10 @@ module.exports = (grunt) ->
         }]
     cssmin:
       dev:
-        expand: true,
-        cwd: 'public_built/stylesheets/',
-        src: ['*.css', '!*.min.css'],
-        dest: 'public_built/stylesheets/',
+        expand: true
+        cwd: 'public_built/stylesheets/'
+        src: ['*.css', '!*.min.css']
+        dest: 'public_built/stylesheets/'
         ext: '.min.css'
 
   require('load-grunt-tasks')(grunt)
