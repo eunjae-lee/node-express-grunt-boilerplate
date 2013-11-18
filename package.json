@@ -1,0 +1,27 @@
+{
+  "name": "appname",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "preinstall": "sudo npm install -g coffee-script grunt grunt-cli forever",
+    "start": "./start.sh"
+  },
+  "dependencies": {
+    "express": "*",
+    "jade": "*"
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "load-grunt-tasks": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-nodeunit": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-coffee": "*",
+    "grunt-coffeelint": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-imagemin": "*",
+    "grunt-contrib-cssmin": "*"
+  }
+}

@@ -1,0 +1,14 @@
+doctype 5
+html
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='/stylesheets/normalize.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.min.css')
+    link(rel='stylesheet', href='/assets/bootstrap-3.0.0/css/bootstrap.min.css', media='screen')
+    block css
+  body
+    block content
+    script(src='/javascripts/jquery-2.0.3.min.js')
+    block scripts
