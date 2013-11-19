@@ -10,6 +10,10 @@ html
     block css
   body
     block content
-    script(src='/javascripts/jquery-2.0.3.min.js')
-    script(src='/assets/bootstrap-3.0.0/js/bootstrap.min.js')
+    if (env == "development")
+        script(src='/javascripts/jquery-2.0.3.js')
+        script(src='/assets/bootstrap-3.0.0/js/bootstrap.js')
+    else
+        script(src='/javascripts/jquery-2.0.3.min.js')
+        script(src='/assets/bootstrap-3.0.0/js/bootstrap.min.js')
     block scripts

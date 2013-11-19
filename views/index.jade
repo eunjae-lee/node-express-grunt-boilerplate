@@ -7,6 +7,9 @@ block content
   h1 This is an index page.
 
 block scripts
-  script(src='/javascripts/index.min.js')
+  if (env == "development")
+    script(src='/javascripts/index.js')
+  else
+    script(src='/javascripts/index.min.js')
   script.
     console.log "hello 2"

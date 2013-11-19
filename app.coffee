@@ -3,6 +3,7 @@ routes = require './routes/routes'
 http = require 'http'
 path = require 'path'
 config = require('./config').config
+injector = require 'render-options-injector'
 
 app = express()
 
@@ -24,6 +25,8 @@ app.configure 'production', ->
 
 app.get '/', routes.index
 app.get '/login', routes.login
+
+injector.inject(app, {env: app.settings.env})
 
 http.createServer(app).listen app.get('port'), ->
   console.log "Express server listening on port #{app.get('port')} in #{app.settings.env} mode"

@@ -12,7 +12,8 @@
     "forever": "*",
     "express": "*",
     "jade": "*",
-    "shelljs": "*"
+    "shelljs": "*",
+    "render-options-injector": "*"
   },
   "devDependencies": {
     "grunt": "*",
