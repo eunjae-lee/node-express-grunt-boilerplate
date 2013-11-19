@@ -26,7 +26,7 @@ app.configure 'production', ->
 app.get '/', routes.index
 app.get '/login', routes.login
 
-injector.inject(app, {env: app.settings.env})
+injector.inject app, {env: app.settings.env}
 
 http.createServer(app).listen app.get('port'), ->
   console.log "Express server listening on port #{app.get('port')} in #{app.settings.env} mode"

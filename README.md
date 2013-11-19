@@ -113,6 +113,34 @@ So basically
 * "stylesheets" and "less" are merged into "stylesheets".
 * And the others are just copied into "public_built".
 
+## Tips & Tricks
+
+### "env" variable at render options
+When rendering views, you have to set options obj like
+
+    res.render "index", {
+    	title: "Index Page"
+		username: "Eunjae Lee"
+    }
+    
+However, this boilerplate uses a library [render-options-injector](https://github.com/eunjae-lee/render-options-injector) to automatically inject app's environment setting(development, production, ...). So you just can use "env" variable at view templates like following code.
+
+    # index.jade
+    if (env == "development")
+        script(src='/javascripts/index.js')
+    else
+        script(src='/javascripts/index.min.js')
+
+And this is how the boilerplate made it work.
+
+    # app.coffee
+    injector = require 'render-options-injector'
+    ...
+    ...
+    injector.inject(app, {'env': app.settings.env, 'or': 'other values'})
+    ...
+    http.createServer(...
+
 ## License
 [MIT](http://opensource.org/licenses/mit-license.html)
 
