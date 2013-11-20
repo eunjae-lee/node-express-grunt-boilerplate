@@ -1,4 +1,4 @@
-# node-express-boilerplate
+# node-express-grunt-boilerplate
 
 A boilerplate to start a new express project based on CoffeeScript, Grunt build system, forever runner, Jade Template Engine and bootstrap.
 
@@ -8,12 +8,12 @@ Any suggestions or pull-requests are welcomed!
 ## Usage
 
 ### Preparing
-    git clone git@github.com:eunjae-lee/node-express-boilerplate.git
-    cd node-express-boilerplate
-	npm install
+    git clone git@github.com:eunjae-lee/node-express-grunt-boilerplate.git
+    cd node-express-grunt-boilerplate
+    npm install
 	
 ### Starting Server
-	npm start
+    npm start
 	
 ### Stopping Server
     npm stop
