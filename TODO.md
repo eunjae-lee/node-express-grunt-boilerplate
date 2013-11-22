@@ -1,0 +1,2 @@
+* Ask when starting server with already existing one.
+* After starting server via forever, it needs to check if the process is really running. When server couldn't start up due to some problems, "forever list" tells the server is running, but "ps" tells there's no process with that pid.
