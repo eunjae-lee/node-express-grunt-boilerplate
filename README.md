@@ -8,7 +8,8 @@ Any suggestions or pull-requests are welcomed!
 ## Usage
 
 ### Preparing
-    git clone git@github.com:eunjae-lee/node-express-grunt-boilerplate.git
+    first, fork this repository!
+    git clone git@github.com:{YOUR USERID}/node-express-grunt-boilerplate.git
     cd node-express-grunt-boilerplate
     npm install
 	
