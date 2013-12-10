@@ -8,83 +8,83 @@ module.exports = (grunt) ->
           level: "warn"
         no_trailing_whitespace:
           level: "warn"
-      app: ['public/coffeescripts/**/*.coffee']
+      app: ['assets/coffeescripts/**/*.coffee']
     coffee:
       dev:
         expand: true
-        cwd: 'public/coffeescripts'
+        cwd: 'assets/coffeescripts'
         src: ['**/*.coffee']
-        dest: 'public_built/javascripts'
+        dest: 'tmp/javascripts'
         ext: '.js'
     watch:
       options:
         livereload: false
       coffee:
-        files: 'public/coffeescripts/**/*.coffee'
+        files: 'assets/coffeescripts/**/*.coffee'
         tasks: ['coffee:dev']
       js:
-        files: 'public/javascripts/**/*.coffee'
+        files: 'assets/javascripts/**/*.coffee'
         tasks: ['copy:js']
       #images:
-      # files: 'public/images/**/*'
+      # files: 'assets/images/**/*'
       # tasks: ['copy:images']
       css:
-        files: 'public/stylesheets/**/*.css'
+        files: 'assets/stylesheets/**/*.css'
         tasks: ['copy:css']
       less:
-        files: 'public/less/**/*.less'
+        files: 'assets/less/**/*.less'
         tasks: ['less:dev']
     less:
       dev:
         expand: true
-        cwd: 'public/less'
+        cwd: 'assets/less'
         src: ['**/*.less']
-        dest: 'public_built/stylesheets'
+        dest: 'tmp/stylesheets'
         ext: '.css'
     imagemin:
       comp:
         files: [{
           expand: true
-          cwd: 'public/images/'
+          cwd: 'assets/images/'
           src: ['**/*.{png,jpg,jpeg,gif}']
-          dest: 'public_built/images'
+          dest: 'tmp/images'
         }]
     copy:
       js:
-        cwd: 'public/javascripts/'
+        cwd: 'tmp/javascripts/'
         src: '**/*'
-        dest: 'public_built/javascripts'
+        dest: 'public/javascripts'
         expand: true
       css:
-        cwd: 'public/stylesheets/'
+        cwd: 'tmp/stylesheets/'
         src: '**/*'
-        dest: 'public_built/stylesheets'
+        dest: 'public/stylesheets'
         expand: true
       assets:
-        cwd: 'public/assets/'
+        cwd: 'assets/vendor/'
         src: '**/*'
-        dest: 'public_built/assets'
+        dest: 'public/assets'
         expand: true
       images:
-        cwd: 'public/images/'
+        cwd: 'assets/images/'
         src: '**/*'
-        dest: 'public_built/images'
+        dest: 'public/images'
         expand: true
     uglify:
       dev:
         files: [{
           expand: true
-          cwd: 'public_built/javascripts/'
+          cwd: 'tmp/javascripts/'
           src: ['**/*.js', '!**/*.min.js']
-          dest: 'public_built/javascripts'
+          dest: 'tmp/javascripts'
           ext: '.min.js'
         }]
     cssmin:
       dev:
         expand: true
-        cwd: 'public_built/stylesheets/'
+        cwd: 'tmp/stylesheets/'
         src: ['*.css', '!*.min.css']
-        dest: 'public_built/stylesheets/'
+        dest: 'tmp/stylesheets/'
         ext: '.min.css'
 
   require('load-grunt-tasks')(grunt)

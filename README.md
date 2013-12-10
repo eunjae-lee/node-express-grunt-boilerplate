@@ -29,8 +29,8 @@ Any suggestions or pull-requests are welcomed!
     ./isRunning.sh
 
 ## Folder Tree
-    public
-        assets
+    assets
+        vendor
         images
         javascripts
         coffeescripts
@@ -40,22 +40,22 @@ Any suggestions or pull-requests are welcomed!
 	views
 
 ## More Guide
-Basically files under "public" folder are copied, minified or converted to "public_built" folder, and node app's static path is set to "public_built".
+Basically files under "assets" folder are copied, minified or converted to "public" folder, and node app's static path is set to "public".
 
-* Files under the following folders will be just copied to /public_built
-  * public/assets
-  * public/images
+* Files under the following folders will be just copied to /public
+  * assets/vendor
+  * assets/images
     * To compress images, run "grunt imagecomp"
-  * public/javascripts
+  * assets/javascripts
     * and also uglified to "\*.min.js"
-  * public/stylesheets
+  * assets/stylesheets
     * and also minified to "\*.min.css"
-* Files under "public/coffeescripts" will be converted to "\*.js" and "\*.min.js" at "/public_built/javascripts"
-* Files under "public/less" will be converted to "\*.css" and "\*.min.css" at "/public_built/stylesheets"
+* Files under "assets/coffeescripts" will be converted to "\*.js" and "\*.min.js" at "/public/javascripts"
+* Files under "assets/less" will be converted to "\*.css" and "\*.min.css" at "/public/stylesheets"
 
 ## Example
-    /public
-        /assets
+    /assets
+        /vendor
             /bootstrap-3.0.0
                 /css
                 	/bootstrap.css
@@ -80,7 +80,7 @@ Basically files under "public" folder are copied, minified or converted to "publ
 
 will be converted to
 
-    /public_built
+    /public
         /assets
             /bootstrap-3.0.0
                 /css
@@ -115,7 +115,7 @@ So basically
 
 * "javascripts" and "coffeescripts" are merged into "javascripts".
 * "stylesheets" and "less" are merged into "stylesheets".
-* And the others are just copied into "public_built".
+* And the others are just copied into "public".
 
 ## Tips & Tricks
 
