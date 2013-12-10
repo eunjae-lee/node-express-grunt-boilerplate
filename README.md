@@ -12,15 +12,18 @@ Any suggestions or pull-requests are welcomed!
     git clone git@github.com:{YOUR USERID}/node-express-grunt-boilerplate.git
     cd node-express-grunt-boilerplate
     npm install
-	
+
 ### Starting Server
     npm start
-	
+
 ### Stopping Server
     npm stop
-    
-### Restarting Server
-    npm restart
+
+### Restarting server
+    pm2 restart all
+
+### Zero downtime restart
+    npm run-script reload
 
 ### Check If Server is Running
     ./isRunning.sh
@@ -108,7 +111,7 @@ And now you can access those static files like following
     http://hostname:port/javascripts/login/login.min.js
     http://hostname:port/stylesheets/login/test.min.css
 
-So basically 
+So basically
 
 * "javascripts" and "coffeescripts" are merged into "javascripts".
 * "stylesheets" and "less" are merged into "stylesheets".
@@ -123,7 +126,7 @@ When rendering views, you have to set options obj like
     	title: "Index Page"
 		username: "Eunjae Lee"
     }
-    
+
 However, this boilerplate uses a library [render-options-injector](https://github.com/eunjae-lee/render-options-injector) to automatically inject app's environment setting(development, production, ...). So you just can use "env" variable at view templates like following code.
 
     # index.jade
