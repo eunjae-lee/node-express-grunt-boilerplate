@@ -3,13 +3,13 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "preinstall": "npm install -g coffee-script grunt grunt-cli forever",
-    "start": "coffee scripts/start.coffee",
-    "stop": "coffee scripts/stop.coffee"
+    "preinstall": "npm install -g coffee-script grunt grunt-cli pm2",
+    "start": "pm2 start app.coffee",
+    "stop": "pm2 stop all",
+    "reload": "pm2 reload all"
   },
   "dependencies": {
     "colors": "*",
-    "forever": "*",
     "express": "*",
     "jade": "*",
     "shelljs": "*",
