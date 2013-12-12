@@ -1,15 +1,12 @@
 extends layout
 
 block css
-  link(rel='stylesheet', href='/stylesheets/index.min.css')
+  link(rel='stylesheet', href='/stylesheets/index.css')
 
 block content
   h1 This is an index page.
 
 block scripts
-  if (env == "development")
-    script(src='/javascripts/index.js')
-  else
-    script(src='/javascripts/index.min.js')
+  script(src='/javascripts/index.js')
   script.
     console.log "hello 2"

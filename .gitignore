@@ -1,4 +1,8 @@
 .DS_Store
+
 node_modules
-public_built
 config.coffee
+public/*
+tmp/*
+
+!.gitkeep

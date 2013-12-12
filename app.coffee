@@ -15,7 +15,7 @@ app.use express.logger 'dev'
 app.use express.bodyParser()
 app.use express.methodOverride()
 app.use app.router
-app.use express.static(path.join __dirname, 'public_built')
+app.use express.static(path.join __dirname, 'public')
 
 app.configure 'development', ->
   app.use express.errorHandler({dumpExceptions: true, showStack: true})
