@@ -53,20 +53,30 @@ module.exports = (grunt) ->
           dest: 'tmp/images'
         }]
     copy:
-      js:
-        cwd: 'tmp/javascripts/'
-        src: '**/*.min.js'
-        dest: 'public/javascripts'
-        expand: true
-      css:
-        cwd: 'tmp/stylesheets/'
-        src: '**/*.min.css'
-        dest: 'public/stylesheets'
-        expand: true
       assets:
         cwd: 'assets/vendor/'
         src: '**/*'
         dest: 'public/assets'
+        expand: true
+      vendor_stylesheets:
+        cwd: 'assets/vendor/stylesheets'
+        src: '**/*.css'
+        dest: 'tmp/stylesheets'
+        expand: true
+      vendor_javascripts:
+        cwd: 'assets/vendor/javascripts'
+        src: '**/*.js'
+        dest: 'tmp/javascripts'
+        expand: true
+      js:
+        cwd: 'tmp/javascripts/'
+        src: '**/*.js'
+        dest: 'public/javascripts'
+        expand: true
+      css:
+        cwd: 'tmp/stylesheets/'
+        src: '**/*.css'
+        dest: 'public/stylesheets'
         expand: true
       images:
         cwd: 'assets/images/'
@@ -80,17 +90,17 @@ module.exports = (grunt) ->
           cwd: 'tmp/javascripts/'
           src: ['**/*.js', '!**/*.min.js']
           dest: 'tmp/javascripts'
-          ext: '.min.js'
+          ext: '.js'
         }]
     cssmin:
       dev:
         expand: true
         cwd: 'tmp/stylesheets/'
-        src: ['*.css', '!*.min.css']
+        src: ['**/*.css']
         dest: 'tmp/stylesheets/'
-        ext: '.min.css'
+        ext: '.css'
 
   require('load-grunt-tasks')(grunt)
 
-  grunt.registerTask 'default', ['clean:pre', 'coffeelint', 'coffee:dev', 'less:dev', 'uglify:dev', 'cssmin:dev', 'copy:js', 'copy:css', 'copy:assets', 'clean:post']
+  grunt.registerTask 'default', ['clean:pre', 'coffeelint', 'coffee:dev', 'less:dev', 'copy:assets', 'copy:vendor_javascripts', 'copy:vendor_stylesheets', 'uglify:dev', 'cssmin:dev', 'copy:js', 'copy:css', 'clean:post']
   grunt.registerTask 'imagecomp', ['imagemin:comp']
