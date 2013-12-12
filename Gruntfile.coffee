@@ -1,6 +1,9 @@
 module.exports = (grunt) ->
   grunt.initConfig
     pkg: grunt.file.readJSON 'package.json'
+    clean:
+      pre: ['public/*']
+      post: ['tmp/*']
     coffeelint:
       options:
         max_line_length:
@@ -52,12 +55,12 @@ module.exports = (grunt) ->
     copy:
       js:
         cwd: 'tmp/javascripts/'
-        src: '**/*'
+        src: '**/*.min.js'
         dest: 'public/javascripts'
         expand: true
       css:
         cwd: 'tmp/stylesheets/'
-        src: '**/*'
+        src: '**/*.min.css'
         dest: 'public/stylesheets'
         expand: true
       assets:
@@ -89,5 +92,5 @@ module.exports = (grunt) ->
 
   require('load-grunt-tasks')(grunt)
 
-  grunt.registerTask 'default', ['coffeelint', 'coffee:dev', 'less:dev', 'copy:js', 'copy:css', 'copy:assets', 'uglify:dev', 'cssmin:dev']
+  grunt.registerTask 'default', ['clean:pre', 'coffeelint', 'coffee:dev', 'less:dev', 'uglify:dev', 'cssmin:dev', 'copy:js', 'copy:css', 'copy:assets', 'clean:post']
   grunt.registerTask 'imagecomp', ['imagemin:comp']
