@@ -149,5 +149,9 @@ And this is how the boilerplate made it work.
 [MIT](http://opensource.org/licenses/mit-license.html)
 
 
+## Contributors
+
+* [Chris McKnight](https://github.com/cmckni3)
+
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/eunjae-lee/node-express-boilerplate/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
