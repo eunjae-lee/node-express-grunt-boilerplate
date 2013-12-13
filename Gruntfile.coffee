@@ -52,6 +52,22 @@ module.exports = (grunt) ->
           src: ['**/*.{png,jpg,jpeg,gif}']
           dest: 'tmp/images'
         }]
+    uglify:
+      dev:
+        files: [{
+          expand: true
+          cwd: 'tmp/javascripts/'
+          src: ['**/*.js', '!**/*.min.js']
+          dest: 'tmp/javascripts'
+          ext: '.js'
+        }]
+    cssmin:
+      dev:
+        expand: true
+        cwd: 'tmp/stylesheets/'
+        src: ['**/*.css']
+        dest: 'tmp/stylesheets/'
+        ext: '.css'
     copy:
       assets:
         cwd: 'assets/vendor/'
@@ -83,24 +99,47 @@ module.exports = (grunt) ->
         src: '**/*'
         dest: 'public/images'
         expand: true
-    uglify:
+    exec:
       dev:
-        files: [{
-          expand: true
-          cwd: 'tmp/javascripts/'
-          src: ['**/*.js', '!**/*.min.js']
-          dest: 'tmp/javascripts'
-          ext: '.js'
-        }]
-    cssmin:
-      dev:
-        expand: true
-        cwd: 'tmp/stylesheets/'
-        src: ['**/*.css']
-        dest: 'tmp/stylesheets/'
-        ext: '.css'
+        options:
+          stdout: true
+          stderr: true
+        command: 'node-dev app.coffee'
+      production_start:
+        command: 'pm2 start app.coffee'
+      production_stop:
+        command: 'pm2 stop all'
+      production_reload:
+        comamnd: 'pm2 reload all'
+
 
   require('load-grunt-tasks')(grunt)
+  grunt.loadNpmTasks 'grunt-exec'
 
-  grunt.registerTask 'default', ['clean:pre', 'coffeelint', 'coffee:dev', 'less:dev', 'copy:assets', 'copy:vendor_javascripts', 'copy:vendor_stylesheets', 'uglify:dev', 'cssmin:dev', 'copy:js', 'copy:css', 'clean:post']
+  grunt.registerTask 'production', [
+    'deploy-assets',
+    'exec:production_start'
+  ]
+
+  grunt.registerTask 'deploy-assets', [
+    'clean:pre',
+    'coffeelint',
+    'coffee:dev',
+    'less:dev',
+    'copy:assets',
+    'copy:vendor_javascripts',
+    'copy:vendor_stylesheets',
+    'uglify:dev',
+    'cssmin:dev',
+    'copy:js',
+    'copy:css',
+    'clean:post'
+  ]
+
+  grunt.registerTask 'stop', ['exec:production_stop']
+  grunt.registerTask 'restart', ['exec:production_stop', 'exec:production_start']
+  grunt.registerTask 'reload', ['exec:production_reload']
+
+  grunt.registerTask 'default', ['deploy-assets', 'exec:dev']
+
   grunt.registerTask 'imagecomp', ['imagemin:comp']

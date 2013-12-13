@@ -4,9 +4,7 @@
   "private": true,
   "scripts": {
     "preinstall": "npm install -g coffee-script grunt grunt-cli pm2",
-    "start": "pm2 start app.coffee",
-    "stop": "pm2 stop all",
-    "reload": "pm2 reload all"
+    "start": "grunt production"
   },
   "dependencies": {
     "colors": "*",
@@ -28,6 +26,8 @@
     "grunt-contrib-watch": "*",
     "grunt-contrib-copy": "*",
     "grunt-contrib-imagemin": "*",
-    "grunt-contrib-cssmin": "*"
+    "grunt-contrib-cssmin": "*",
+    "node-dev": "~2.1.4",
+    "grunt-exec": "~0.4.2"
   }
 }
