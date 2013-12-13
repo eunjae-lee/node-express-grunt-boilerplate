@@ -2,8 +2,17 @@ express = require 'express'
 routes = require './routes/routes'
 http = require 'http'
 path = require 'path'
-config = require('./config').config
 injector = require 'render-options-injector'
+
+try
+  config = require('./config').config
+catch e
+  if e.code is 'MODULE_NOT_FOUND'
+    console.error "config.coffee file is missing!"
+    process.exit 1
+unless config.port
+  console.error "config.port is missing. Check out \"config.coffee\" file."
+  process.exit 1
 
 app = express()
 
