@@ -13,17 +13,27 @@ Any suggestions or pull-requests are welcomed!
     cd node-express-grunt-boilerplate
     npm install
 
-### Starting Server
+### Development
+    grunt
+
+### Production
+
+#### Starting Server
     npm start
 
-### Stopping Server
-    npm stop
+or
 
-### Restarting server
-    pm2 restart all
+    grunt production
 
-### Zero downtime restart
-    npm run-script reload
+
+#### Stopping Server
+    grunt stop
+
+#### Restarting server
+    grunt restart
+
+#### Zero downtime restart
+    grunt reload
 
 ## Folder Tree
     assets
