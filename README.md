@@ -1,6 +1,6 @@
 # node-express-grunt-boilerplate
 
-A boilerplate to start a new express project based on CoffeeScript, Grunt build system, forever runner, Jade Template Engine and bootstrap.
+A boilerplate to start a new express project based on CoffeeScript, Grunt build system, pm2, Jade Template Engine and bootstrap.
 
 Any suggestions or pull-requests are welcomed!
 
@@ -25,19 +25,14 @@ Any suggestions or pull-requests are welcomed!
 ### Zero downtime restart
     npm run-script reload
 
-### Check If Server is Running
-    ./isRunning.sh
-
 ## Folder Tree
     assets
         vendor
         images
-        javascripts
         coffeescripts
-        stylesheets
         less
     routes
-	views
+    views
 
 ## More Guide
 Basically files under "assets" folder are copied, minified or converted to "public" folder, and node app's static path is set to "public".
