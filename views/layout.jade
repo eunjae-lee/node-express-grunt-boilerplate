@@ -11,7 +11,7 @@ html
   body
     block content
     script.
-        window.console = window.console or { log: function () {} }
+        window.console = window.console || { log: function () {} }
     //if lte IE 8
         script(src='/javascripts/jquery-1.10.2.min.js')
     //if gte IE 9
