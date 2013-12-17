@@ -53,36 +53,40 @@ module.exports = (grunt) ->
           dest: 'tmp/images'
         }]
     uglify:
-      dev:
+      js:
         files: [{
           expand: true
           cwd: 'tmp/javascripts/'
           src: ['**/*.js', '!**/*.min.js']
           dest: 'tmp/javascripts'
-          ext: '.js'
+          ext: '.min.js'
+        }]
+      vendor_js:
+        files: [{
+          expand: true
+          cwd: 'assets/vendor/javascripts/'
+          src: ['**/*.js', '!**/*.min.js']
+          dest: 'public/vendor/javascripts'
+          ext: '.min.js'
         }]
     cssmin:
-      dev:
+      css:
         expand: true
         cwd: 'tmp/stylesheets/'
-        src: ['**/*.css']
+        src: ['**/*.css', '!**/*.min.css']
         dest: 'tmp/stylesheets/'
-        ext: '.css'
+        ext: '.min.css'
+      vendor_css:
+        expand: true
+        cwd: 'assets/vendor/stylesheets/'
+        src: ['**/*.css', '!**/*.min.css']
+        dest: 'public/vendor/stylesheets/'
+        ext: '.min.css'
     copy:
       assets:
         cwd: 'assets/vendor/'
         src: '**/*'
         dest: 'public/vendor'
-        expand: true
-      vendor_stylesheets:
-        cwd: 'assets/vendor/stylesheets'
-        src: '**/*.css'
-        dest: 'tmp/stylesheets'
-        expand: true
-      vendor_javascripts:
-        cwd: 'assets/vendor/javascripts'
-        src: '**/*.js'
-        dest: 'tmp/javascripts'
         expand: true
       js:
         cwd: 'tmp/javascripts/'
@@ -124,15 +128,19 @@ module.exports = (grunt) ->
   grunt.registerTask 'deploy-assets', [
     'clean:pre',
     'coffeelint',
+
     'coffee:dev',
     'less:dev',
     'copy:assets',
-    'copy:vendor_javascripts',
-    'copy:vendor_stylesheets',
-    'uglify:dev',
-    'cssmin:dev',
+
+    'uglify:js',
     'copy:js',
+    'uglify:vendor_js',
+
+    'cssmin:css',
     'copy:css',
+    'cssmin:vendor_css',
+
     'clean:post'
   ]
 
