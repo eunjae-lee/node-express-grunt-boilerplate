@@ -12,6 +12,7 @@ Any suggestions or pull-requests are welcomed!
     git clone git@github.com:{YOUR USERID}/node-express-grunt-boilerplate.git
     cd node-express-grunt-boilerplate
     npm install
+    cp config.sample.coffee config.coffee (Modify port number if need)
 
 ### Development
     grunt
