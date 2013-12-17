@@ -86,7 +86,7 @@ Basically files under "assets" folder are copied, minified or converted to "publ
 will be converted to
 
     /public
-        /assets
+        /vendor
             /bootstrap-3.0.0
                 /css
                 	/bootstrap.css (just copied)

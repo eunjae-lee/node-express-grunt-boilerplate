@@ -72,7 +72,7 @@ module.exports = (grunt) ->
       assets:
         cwd: 'assets/vendor/'
         src: '**/*'
-        dest: 'public/assets'
+        dest: 'public/vendor'
         expand: true
       vendor_stylesheets:
         cwd: 'assets/vendor/stylesheets'
