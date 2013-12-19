@@ -4,17 +4,16 @@ html
     title= title
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    link(rel='stylesheet', href='/stylesheets/normalize.css')
-    link(rel='stylesheet', href='/stylesheets/app.css')
     link(rel='stylesheet', href='/vendor/bootstrap-3.0.0/css/bootstrap.css', media='screen')
+    link(rel='stylesheet', href='/stylesheets/app.css')
     block css
   body
     block content
     script.
         window.console = window.console || { log: function () {} }
     //if lte IE 8
-        script(src='/javascripts/jquery-1.10.2.min.js')
+        script(src='/vendor/javascripts/jquery-1.10.2.min.js')
     //if gte IE 9
-        <!--><script src='/javascripts/jquery-2.0.3.min.js'></script>
+        <!--><script src='/vendor/javascripts/jquery-2.0.3.min.js'></script>
     script(src='/vendor/bootstrap-3.0.0/js/bootstrap.js')
     block scripts
