@@ -24,7 +24,7 @@ module.exports = (grunt) ->
         livereload: false
       coffee:
         files: 'assets/coffeescripts/**/*.coffee'
-        tasks: ['coffee:dev']
+        tasks: ['coffee:dev', 'copy:js', 'clean:post']
       js:
         files: 'assets/javascripts/**/*.coffee'
         tasks: ['copy:js']
@@ -36,7 +36,7 @@ module.exports = (grunt) ->
         tasks: ['copy:css']
       less:
         files: 'assets/less/**/*.less'
-        tasks: ['less:dev']
+        tasks: ['less:dev', 'copy:css', 'clean:post']
     less:
       dev:
         expand: true
@@ -115,9 +115,15 @@ module.exports = (grunt) ->
         command: 'pm2 stop all'
       production_reload:
         comamnd: 'pm2 reload all'
+    concurrent:
+      dev:
+        tasks: ['exec:dev', 'watch']
+        options:
+          logConcurrentOutput: true
 
 
   require('load-grunt-tasks')(grunt)
+  grunt.loadNpmTasks 'grunt-concurrent'
   grunt.loadNpmTasks 'grunt-exec'
 
   grunt.registerTask 'production', [
@@ -148,6 +154,6 @@ module.exports = (grunt) ->
   grunt.registerTask 'restart', ['exec:production_stop', 'exec:production_start']
   grunt.registerTask 'reload', ['exec:production_reload']
 
-  grunt.registerTask 'default', ['deploy-assets', 'exec:dev']
+  grunt.registerTask 'default', ['deploy-assets', 'concurrent:dev']
 
   grunt.registerTask 'imagecomp', ['imagemin:comp']
