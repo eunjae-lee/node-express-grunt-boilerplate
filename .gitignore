@@ -4,5 +4,6 @@ node_modules
 config.coffee
 public/*
 tmp/*
+npm-debug.log
 
 !.gitkeep
