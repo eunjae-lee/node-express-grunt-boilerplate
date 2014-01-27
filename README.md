@@ -20,21 +20,17 @@ Any suggestions or pull-requests are welcomed!
 ### Production
 
 #### Starting Server
-    npm start
-
-or
-
     grunt production
 
 
 #### Stopping Server
-    grunt stop
+    pm2 stop app_id    # type 'pm2 list' to get app_id
 
 #### Restarting server
-    grunt restart
+    pm2 restart app_id    # type 'pm2 list' to get app_id
 
 #### Zero downtime restart
-    grunt reload
+    pm2 reload app_id    # type 'pm2 list' to get app_id
 
 ## Folder Tree
     assets

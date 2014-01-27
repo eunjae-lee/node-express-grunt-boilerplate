@@ -113,10 +113,6 @@ module.exports = (grunt) ->
         command: 'node-dev app.coffee'
       production_start:
         command: "pm2 start app.coffee --name #{config.appname}"
-      production_stop:
-        command: 'pm2 stop all'
-      production_reload:
-        comamnd: 'pm2 reload all'
     concurrent:
       dev:
         tasks: ['exec:dev', 'watch']
@@ -151,10 +147,6 @@ module.exports = (grunt) ->
 
     'clean:post'
   ]
-
-  grunt.registerTask 'stop', ['exec:production_stop']
-  grunt.registerTask 'restart', ['exec:production_stop', 'exec:production_start']
-  grunt.registerTask 'reload', ['exec:production_reload']
 
   grunt.registerTask 'default', ['deploy-assets', 'concurrent:dev']
 
