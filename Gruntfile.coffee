@@ -1,3 +1,5 @@
+config = require('./config').config
+
 module.exports = (grunt) ->
   grunt.initConfig
     pkg: grunt.file.readJSON 'package.json'
@@ -110,7 +112,7 @@ module.exports = (grunt) ->
           stderr: true
         command: 'node-dev app.coffee'
       production_start:
-        command: 'pm2 start app.coffee'
+        command: "pm2 start app.coffee --name #{config.appname}"
       production_stop:
         command: 'pm2 stop all'
       production_reload:
