@@ -112,7 +112,7 @@ module.exports = (grunt) ->
           stderr: true
         command: 'node-dev app.coffee'
       production_start:
-        command: "pm2 start app.coffee --name #{config.appname}"
+        command: "pm2 start app.coffee --name #{config.appname} & coffee check.coffee"
     concurrent:
       dev:
         tasks: ['exec:dev', 'watch']
