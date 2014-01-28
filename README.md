@@ -52,10 +52,10 @@ You will fork this repository, and do works on your fork. Meanwhile, we'll do ou
     # The steps above will create a branch named "boilerplate" pointing boilerplate repository.
     # When we update some stuff, you can checkout boilerplate branch and pull the stuff, and merge into your develop, master, etc like following:
 
-    # current branch : develop
+    # ex> current branch : master
     git checkout boilerplate
     git pull
-    git checkout develop
+    git checkout master
     git merge boilerplate
 
 ## More Guide
