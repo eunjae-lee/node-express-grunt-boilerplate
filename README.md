@@ -41,6 +41,23 @@ Any suggestions or pull-requests are welcomed!
     routes
     views
 
+## How to keep updated from this repository
+You will fork this repository, and do works on your fork. Meanwhile, we'll do our own work on this repository and sometimes you want to merge our changes into your repository. You can do just following steps:
+
+    # at your repository folder,
+    git remote add boilerplate git@github.com:eunjae-lee/node-express-grunt-boilerplate.git
+    git fetch boilerplate
+    git branch boilerplate boilerplate/master
+
+    # The steps above will create a branch named "boilerplate" pointing boilerplate repository.
+    # When we update some stuff, you can checkout boilerplate branch and pull the stuff, and merge into your develop, master, etc like following:
+
+    # current branch : develop
+    git checkout boilerplate
+    git pull
+    git checkout develop
+    git merge boilerplate
+
 ## More Guide
 Basically files under "assets" folder are copied, minified or converted to "public" folder, and node app's static path is set to "public".
 
