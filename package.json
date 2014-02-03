@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "preinstall": "npm install -g coffee-script grunt grunt-cli pm2 node-dev",
+    "preinstall": "npm install -g coffee-script node-dev grunt grunt-cli pm2",
     "start": "grunt production"
   },
   "dependencies": {
@@ -12,7 +12,7 @@
     "jade": "*",
     "shelljs": "*",
     "render-options-injector": "*",
-    "coffee-script": ">= 1.6.1"
+    "coffee-script": "~1.6.3"
   },
   "devDependencies": {
     "grunt": "*",
