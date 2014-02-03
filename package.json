@@ -3,10 +3,11 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "preinstall": "npm install -g coffee-script node-dev grunt grunt-cli pm2",
-    "start": "grunt production"
+    "preinstall": "npm install -g coffee-script gulp pm2 supervisor",
+    "start": "gulp production --require coffee-script"
   },
   "dependencies": {
+    "coffee-script": "~1.6.0",
     "colors": "*",
     "express": "*",
     "jade": "*",
@@ -15,21 +16,17 @@
     "coffee-script": "~1.6.3"
   },
   "devDependencies": {
-    "grunt": "*",
-    "load-grunt-tasks": "*",
-    "grunt-contrib-clean": "*",
-    "grunt-contrib-jshint": "*",
-    "grunt-contrib-nodeunit": "*",
-    "grunt-contrib-uglify": "*",
-    "grunt-contrib-coffee": "*",
-    "grunt-coffeelint": "*",
-    "grunt-contrib-less": "*",
-    "grunt-contrib-watch": "*",
-    "grunt-contrib-copy": "*",
-    "grunt-contrib-imagemin": "*",
-    "grunt-contrib-cssmin": "*",
-    "node-dev": "~2.1.4",
-    "grunt-exec": "~0.4.2",
-    "grunt-concurrent": "~0.4.2"
+    "gulp": "~3.5.0",
+    "gulp-util": "~2.2.13",
+    "gulp-uglify": "~0.2.0",
+    "gulp-imagemin": "~0.1.4",
+    "gulp-nodemon": "~0.1.2",
+    "gulp-concat": "~2.1.7",
+    "gulp-clean": "~0.2.4",
+    "gulp-coffee": "~1.4.1",
+    "gulp-coffeelint": "~0.2.0",
+    "gulp-less": "~1.2.1",
+    "gulp-exec": "~1.0.4",
+    "gulp-minify-css": "~0.2.0"
   }
 }
