@@ -172,5 +172,5 @@ And this is how the boilerplate made it work.
 
 * [Chris McKnight](https://github.com/cmckni3)
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/eunjae-lee/node-express-boilerplate/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/eunjae-lee/node-express-grunt-boilerplate/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
