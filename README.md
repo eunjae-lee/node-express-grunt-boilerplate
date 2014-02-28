@@ -163,6 +163,12 @@ And this is how the boilerplate made it work.
     injector.inject(app, {'env': app.settings.env, 'or': 'other values'})
     ...
     http.createServer(...
+    
+### Error: SSL Error: CERT_UNTRUSTED
+
+    npm config set strict-ssl false
+    
+Check out [this link](http://stackoverflow.com/questions/9626990/receiving-error-error-ssl-error-self-signed-cert-in-chain-while-using-npm).
 
 ## License
 [MIT](http://opensource.org/licenses/mit-license.html)
