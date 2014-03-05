@@ -3,81 +3,283 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
     <title>Node-express-grunt-boilerplate by eunjae-lee</title>
   </head>
 
   <body>
-    <header>
+    <div id="container">
       <div class="inner">
-        <h1>Node-express-grunt-boilerplate</h1>
-        <h2>A boilerplate to start a new express project based on CoffeeScript, Grunt build system, forever runner, Jade Template Engine and bootstrap</h2>
-        <a href="https://github.com/eunjae-lee/node-express-grunt-boilerplate" class="button"><small>View project on</small>GitHub</a>
-      </div>
-    </header>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+        <header>
+          <h1>Node-express-grunt-boilerplate</h1>
+          <h2>A boilerplate to start a new express project based on CoffeeScript, Grunt build system, forever runner, Jade Template Engine and bootstrap</h2>
+        </header>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/eunjae-lee/node-express-grunt-boilerplate/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/eunjae-lee/node-express-grunt-boilerplate/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/eunjae-lee/node-express-grunt-boilerplate" id="view-on-github" class="button"><span>View on GitHub</span></a>
         </section>
 
-        <aside id="sidebar">
-          <a href="https://github.com/eunjae-lee/node-express-grunt-boilerplate/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/eunjae-lee/node-express-grunt-boilerplate/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
+        <hr>
 
-          <p class="repo-owner"><a href="https://github.com/eunjae-lee/node-express-grunt-boilerplate"></a> is maintained by <a href="https://github.com/eunjae-lee">eunjae-lee</a>.</p>
+        <section id="main_content">
+          <h1>
+<a name="node-express-grunt-boilerplate" class="anchor" href="#node-express-grunt-boilerplate"><span class="octicon octicon-link"></span></a>node-express-grunt-boilerplate</h1>
 
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
+<p>A boilerplate to start a new express project based on CoffeeScript, Grunt build system, pm2, Jade Template Engine and bootstrap.</p>
+
+<p>Any suggestions or pull-requests are welcomed!</p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<h3>
+<a name="preparing" class="anchor" href="#preparing"><span class="octicon octicon-link"></span></a>Preparing</h3>
+
+<pre><code>first, fork this repository!
+git clone git@github.com:{YOUR USERID}/node-express-grunt-boilerplate.git
+cd node-express-grunt-boilerplate
+npm install
+cp config.sample.coffee config.coffee (Modify port number if need)
+</code></pre>
+
+<h3>
+<a name="development" class="anchor" href="#development"><span class="octicon octicon-link"></span></a>Development</h3>
+
+<pre><code>grunt
+</code></pre>
+
+<h3>
+<a name="production" class="anchor" href="#production"><span class="octicon octicon-link"></span></a>Production</h3>
+
+<h4>
+<a name="starting-server" class="anchor" href="#starting-server"><span class="octicon octicon-link"></span></a>Starting Server</h4>
+
+<pre><code>grunt production
+</code></pre>
+
+<h4>
+<a name="stopping-server" class="anchor" href="#stopping-server"><span class="octicon octicon-link"></span></a>Stopping Server</h4>
+
+<pre><code>pm2 stop app_id    # type 'pm2 list' to get app_id
+</code></pre>
+
+<h4>
+<a name="restarting-server" class="anchor" href="#restarting-server"><span class="octicon octicon-link"></span></a>Restarting server</h4>
+
+<pre><code>pm2 restart app_id    # type 'pm2 list' to get app_id
+</code></pre>
+
+<h4>
+<a name="zero-downtime-restart" class="anchor" href="#zero-downtime-restart"><span class="octicon octicon-link"></span></a>Zero downtime restart</h4>
+
+<pre><code>pm2 reload app_id    # type 'pm2 list' to get app_id
+</code></pre>
+
+<h2>
+<a name="folder-tree" class="anchor" href="#folder-tree"><span class="octicon octicon-link"></span></a>Folder Tree</h2>
+
+<pre><code>assets
+    vendor
+    images
+    coffeescripts
+    less
+routes
+views
+</code></pre>
+
+<h2>
+<a name="how-to-keep-updated-from-this-repository" class="anchor" href="#how-to-keep-updated-from-this-repository"><span class="octicon octicon-link"></span></a>How to keep updated from this repository</h2>
+
+<p>You will fork this repository, and do works on your fork. Meanwhile, we'll do our own work on this repository and sometimes you want to merge our changes into your repository. You can do just following steps:</p>
+
+<pre><code># at your repository folder,
+git remote add boilerplate git@github.com:eunjae-lee/node-express-grunt-boilerplate.git
+git fetch boilerplate
+git branch boilerplate boilerplate/master
+</code></pre>
+
+<p>The steps above will create a branch named "boilerplate" pointing boilerplate repository.
+When we update some stuff, you can checkout boilerplate branch and pull the stuff, and merge into your develop, master, etc like following:</p>
+
+<pre><code># ex&gt; current branch : master
+git checkout boilerplate
+git pull
+git checkout master
+git merge boilerplate
+</code></pre>
+
+<h2>
+<a name="more-guide" class="anchor" href="#more-guide"><span class="octicon octicon-link"></span></a>More Guide</h2>
+
+<p>Basically files under "assets" folder are copied, minified or converted to "public" folder, and node app's static path is set to "public".</p>
+
+<ul>
+<li>Files under the following folders will be just copied to /public
+
+<ul>
+<li>assets/vendor</li>
+<li>assets/images
+
+<ul>
+<li>To compress images, run "grunt imagecomp"</li>
+</ul>
+</li>
+<li>assets/javascripts
+
+<ul>
+<li>and also uglified to "*.min.js"</li>
+</ul>
+</li>
+<li>assets/stylesheets
+
+<ul>
+<li>and also minified to "*.min.css"</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Files under "assets/coffeescripts" will be converted to "*.js" and "*.min.js" at "/public/javascripts"</li>
+<li>Files under "assets/less" will be converted to "*.css" and "*.min.css" at "/public/stylesheets"</li>
+</ul><h2>
+<a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h2>
+
+<pre><code>/assets
+    /vendor
+        /bootstrap-3.0.0
+            /css
+                /bootstrap.css
+                /bootstrap.min.css
+            /js
+                /bootstrap.js
+                /bootstrap.min.js
+    /images
+        /bg.png
+    /javascripts
+        /login
+            /login.js
+    /coffeescripts
+        /login
+            /helper.coffee
+    /stylesheets
+        /login
+            /login.css
+    /less
+        /login
+            /test.less
+</code></pre>
+
+<p>will be converted to</p>
+
+<pre><code>/public
+    /vendor
+        /bootstrap-3.0.0
+            /css
+                /bootstrap.css (just copied)
+                /bootstrap.min.css (just copied)
+            /js
+                /bootstrap.js (just copied)
+                /bootstrap.min.js (just copied)
+    /images
+        /bg.png (just copied)
+    /javascripts
+        /login
+            /login.js (just copied)
+            /login.min.js (uglified from login.js)
+            /helper.js (converted from helper.coffee)
+            /helper.min.js (converted from helper.coffee)
+    /stylesheets
+        /login
+            /login.css (just copied)
+            /login.min.css (minified from login.css)
+            /test.css (converted from test.less)
+            /test.min.css (converted from test.less)
+</code></pre>
+
+<p>And now you can access those static files like following</p>
+
+<pre><code>http://hostname:port/assets/bootstrap-3.0.0/css/bootstrap.css
+http://hostname:port/images/bg.png
+http://hostname:port/javascripts/login/login.min.js
+http://hostname:port/stylesheets/login/test.min.css
+</code></pre>
+
+<p>So basically</p>
+
+<ul>
+<li>"javascripts" and "coffeescripts" are merged into "javascripts".</li>
+<li>"stylesheets" and "less" are merged into "stylesheets".</li>
+<li>And the others are just copied into "public".</li>
+</ul><h2>
+<a name="tips--tricks" class="anchor" href="#tips--tricks"><span class="octicon octicon-link"></span></a>Tips &amp; Tricks</h2>
+
+<h3>
+<a name="env-variable-at-render-options" class="anchor" href="#env-variable-at-render-options"><span class="octicon octicon-link"></span></a>"env" variable at render options</h3>
+
+<p>When rendering views, you have to set options obj like</p>
+
+<pre><code>res.render "index", {
+    title: "Index Page"
+    username: "Eunjae Lee"
+}
+</code></pre>
+
+<p>However, this boilerplate uses a library <a href="https://github.com/eunjae-lee/render-options-injector">render-options-injector</a> to automatically inject app's environment setting(development, production, ...). So you just can use "env" variable at view templates like following code.</p>
+
+<pre><code># index.jade
+if (env == "development")
+    script(src='/javascripts/index.js')
+else
+    script(src='/javascripts/index.min.js')
+</code></pre>
+
+<p>And this is how the boilerplate made it work.</p>
+
+<pre><code># app.coffee
+injector = require 'render-options-injector'
+...
+...
+injector.inject(app, {'env': app.settings.env, 'or': 'other values'})
+...
+http.createServer(...
+</code></pre>
+
+<h3>
+<a name="error-ssl-error-cert_untrusted" class="anchor" href="#error-ssl-error-cert_untrusted"><span class="octicon octicon-link"></span></a>Error: SSL Error: CERT_UNTRUSTED</h3>
+
+<pre><code>npm config set strict-ssl false
+</code></pre>
+
+<p>Check out <a href="http://stackoverflow.com/questions/9626990/receiving-error-error-ssl-error-self-signed-cert-in-chain-while-using-npm">this link</a>.</p>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p><a href="http://opensource.org/licenses/mit-license.html">MIT</a></p>
+
+<h2>
+<a name="contributors" class="anchor" href="#contributors"><span class="octicon octicon-link"></span></a>Contributors</h2>
+
+<ul>
+<li><a href="https://github.com/cmckni3">Chris McKnight</a></li>
+</ul><p><a href="https://bitdeli.com/free" title="Bitdeli Badge"><img src="https://d2weczhvl823v0.cloudfront.net/eunjae-lee/node-express-grunt-boilerplate/trend.png" alt="Bitdeli Badge"></a></p>
+        </section>
+
+        <footer>
+          Node-express-grunt-boilerplate is maintained by <a href="https://github.com/eunjae-lee">eunjae-lee</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
       </div>
     </div>
-
-  
   </body>
 </html>
