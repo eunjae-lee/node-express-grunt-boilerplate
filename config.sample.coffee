@@ -15,5 +15,9 @@ exports.config =
   #   help
   #   warn
   #   error
-  levels:
-    server: 'debug'
+  logger:
+    file:
+      maxsize: 10*1024*1024
+      maxFiles: 1
+    levels:
+      server: 'debug'
