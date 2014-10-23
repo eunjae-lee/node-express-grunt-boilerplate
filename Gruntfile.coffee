@@ -4,7 +4,7 @@ module.exports = (grunt) ->
   grunt.initConfig
     pkg: grunt.file.readJSON 'package.json'
     clean:
-      pre: ['public/*']
+      pre: ['public/*', '!public/favicon.ico']
       post: ['tmp/*']
     coffeelint:
       options:
