@@ -7,12 +7,18 @@
     "start": "grunt production"
   },
   "dependencies": {
+    "body-parser": "^1.9.1",
+    "coffee-script": "~1.8.0",
     "colors": "*",
-    "express": "*",
+    "errorhandler": "^1.2.2",
+    "express": "^4.9.8",
     "jade": "*",
+    "method-override": "^2.3.0",
+    "morgan": "^1.4.1",
+    "multer": "^0.1.6",
+    "render-options-injector": "0.0.1",
     "shelljs": "*",
-    "render-options-injector": "*",
-    "coffee-script": "~1.6.3"
+    "winston": "^0.8.1"
   },
   "devDependencies": {
     "grunt": "*",
