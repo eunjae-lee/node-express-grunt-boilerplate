@@ -16,7 +16,7 @@
     "method-override": "^2.3.0",
     "morgan": "^1.4.1",
     "multer": "^0.1.6",
-    "render-options-injector": "0.0.1",
+    "render-options-injector": "0.0.2",
     "shelljs": "*",
     "winston": "^0.8.1"
   },
