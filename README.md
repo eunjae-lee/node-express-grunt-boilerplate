@@ -1,6 +1,6 @@
 # node-express-grunt-boilerplate
 
-A boilerplate to start a new express project based on CoffeeScript, Grunt build system, pm2, Jade Template Engine and bootstrap.
+A boilerplate to start a new express project based on CoffeeScript, Grunt build system, Jade Template Engine and bootstrap.
 
 Any suggestions or pull-requests are welcomed!
 
@@ -21,16 +21,6 @@ Any suggestions or pull-requests are welcomed!
 
 #### Starting Server
     grunt production
-
-
-#### Stopping Server
-    pm2 stop app_id    # type 'pm2 list' to get app_id
-
-#### Restarting server
-    pm2 restart app_id    # type 'pm2 list' to get app_id
-
-#### Zero downtime restart
-    pm2 reload app_id    # type 'pm2 list' to get app_id
 
 ## Folder Tree
     assets

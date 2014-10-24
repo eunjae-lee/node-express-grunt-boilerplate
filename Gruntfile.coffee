@@ -110,19 +110,18 @@ module.exports = (grunt) ->
         options:
           stdout: true
           stderr: true
-        command: 'node-dev app.coffee'
+        command: 'npm start'
       production_start:
-        command: "pm2 start app.coffee --name #{config.appname} & coffee check.coffee"
-    concurrent:
-      dev:
-        tasks: ['exec:dev', 'watch']
-        options:
-          logConcurrentOutput: true
+        command: "NODE_ENV=production npm start"
 
 
   require('load-grunt-tasks')(grunt)
-  grunt.loadNpmTasks 'grunt-concurrent'
   grunt.loadNpmTasks 'grunt-exec'
+
+  grunt.registerTask 'default', [
+    'deploy-assets',
+    'exec:dev'
+  ]
 
   grunt.registerTask 'production', [
     'deploy-assets',
@@ -147,7 +146,5 @@ module.exports = (grunt) ->
 
     'clean:post'
   ]
-
-  grunt.registerTask 'default', ['deploy-assets', 'concurrent:dev']
 
   grunt.registerTask 'imagecomp', ['imagemin:comp']

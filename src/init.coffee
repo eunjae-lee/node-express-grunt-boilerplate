@@ -1,4 +1,5 @@
 appdir         = process.cwd()
+fs             = require 'fs'
 express        = require 'express'
 bodyParser     = require 'body-parser'
 multer         = require 'multer'
@@ -17,7 +18,9 @@ exports.app = (app) ->
   app.set 'port', config.port
   app.set 'views', path.join(rootPath, 'views')
   app.set 'view engine', 'jade'
-  app.use favicon("#{appdir}/public/favicon.ico")
+  faviconPath = "#{appdir}/public/favicon.ico"
+  if fs.existsSync faviconPath
+    app.use favicon faviconPath
   app.use morgan('dev')
   app.use bodyParser.urlencoded({ extended: true })
   app.use multer()

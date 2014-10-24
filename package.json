@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "preinstall": "npm install -g coffee-script node-dev grunt grunt-cli pm2",
-    "start": "grunt production"
+    "start": "node_modules/coffee-script/bin/coffee app.coffee"
   },
   "dependencies": {
     "body-parser": "^1.9.1",
@@ -17,6 +17,8 @@
     "morgan": "^1.4.1",
     "multer": "^0.1.6",
     "render-options-injector": "0.0.2",
+    "serve-favicon": "^2.1.6",
+    "serve-static": "^1.7.1",
     "shelljs": "*",
     "winston": "^0.8.1"
   },
