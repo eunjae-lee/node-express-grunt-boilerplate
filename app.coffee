@@ -1,5 +1,6 @@
 appdir       = process.cwd()
 express      = require 'express'
+app          = express()
 http         = require 'http'
 config       = require("#{appdir}/config").config
 init         = require "#{appdir}/src/init"
@@ -10,7 +11,6 @@ unless config.port
   serverLogger.error "config.port is missing. Check out \"config.coffee\" file."
   process.exit 1
 
-app = express()
 init.app app
 init.router app
 
