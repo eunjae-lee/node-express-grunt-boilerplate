@@ -13,9 +13,8 @@ mainRouter     = require '../routes/main'
 config         = require('../config').config
 
 exports.app = (app) ->
-  rootPath = process.cwd()
   app.set 'port', config.port
-  app.set 'views', path.join(rootPath, 'views')
+  app.set 'views', path.join(appdir, 'views')
   app.set 'view engine', 'jade'
   app.use favicon("#{appdir}/public/favicon.ico")
   app.use morgan('dev')
@@ -23,9 +22,9 @@ exports.app = (app) ->
   app.use multer()
   app.use bodyParser.json()
   app.use methodOverride('_method')
-  app.use serveStatic(path.join(rootPath, 'public'))
+  app.use serveStatic(path.join(appdir, 'public'))
 
-  if app.get 'env' is 'development'
+  if app.settings.env is 'development'
     app.use errorhandler({dumpExceptions: true, showStack: true})
   else
     app.use errorhandler()

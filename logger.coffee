@@ -2,8 +2,6 @@ appdir  = process.cwd()
 config  = require("#{appdir}/config").config
 winston = require 'winston'
 
-env = process.env.NODE_ENV || 'development'
-
 for loggerName of config.logger.levels
   level = config.logger.levels[loggerName]
   appenders =
@@ -14,7 +12,7 @@ for loggerName of config.logger.levels
     file:
       label: loggerName
       level: level
-      filename: "#{appdir}/log/#{env}.log"
+      filename: "#{appdir}/log/#{process.env}.log"
       # Use config value or default to 10 MB
       maxSize: config.logger.file.maxSize || 10*1024*1024
       # Use config value or default to 1 file
