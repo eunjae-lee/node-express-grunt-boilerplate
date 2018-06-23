@@ -1,3 +1,5 @@
+***THIS REPOSITORY IS NO LONGER MAINTAINED.***
+
 # node-express-grunt-boilerplate
 
 A boilerplate to start a new express project based on CoffeeScript, Grunt build system, Jade Template Engine and bootstrap.
